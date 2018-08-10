@@ -11,6 +11,10 @@ int numberOfPoints;
 
 void getConfigFromArgs(int argc , char* argv[]){
   numberOfPoints = atoi(argv[1]);
+  if( numberOfPoints <= 0 ){
+    numberOfPoints = 2;
+  }
+  numberOfPoints += numberOfPoints % 2;
   Juan::Ellipse e;
   e.r1 = atof(argv[2]);
   e.r2 = atof(argv[3]);
