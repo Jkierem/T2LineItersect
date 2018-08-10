@@ -43,7 +43,6 @@ std::vector<Point_2> Juan::generateRandomPoints( int n , Ellipse e){
 
 Hull Juan::generateRandomLines( Cloud dots ){
   Hull lines;
-  dots = Juan::shuffleCloud(dots);
   for (size_t i = 0; i < dots.size(); i+=2) {
     lines.push_back( Segment_2( dots[i], dots[i+1] ) );
   }
